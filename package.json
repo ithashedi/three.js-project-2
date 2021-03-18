@@ -2,7 +2,7 @@
   "name": "intro-to-tonejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "lib": "lib"
   },
