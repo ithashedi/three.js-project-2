@@ -1,0 +1,23 @@
+// Create an AudioContext in response to a user gesture
+document.querySelector('#info').addEventListener('click', function() {	
+	const context = new AudioContext();
+	document.getElementById("info").style.display = "none";
+});
+
+document.querySelector('#box').addEventListener('click', function() {	
+	// Write your musical code here...
+	let synth = new Tone.Synth().toMaster();
+	const now = Tone.now();
+	synth.triggerAttackRelease("G5", "2n", now);
+	synth.triggerAttackRelease("E5", "2n", now + 1);
+	synth.triggerAttackRelease("C5", "2n", now + 2);
+	synth.triggerAttackRelease("G4", "2n", now + 3);
+	synth.triggerAttackRelease("A4", "4n", now + 4);
+	synth.triggerAttackRelease("B4", "4n", now + 4.5);
+	synth.triggerAttackRelease("C5", "4n", now + 5);
+	synth.triggerAttackRelease("A4", "2n", now + 5.5);
+	synth.triggerAttackRelease("C5", "4n", now + 6.5);
+	synth.triggerAttackRelease("G4", "2n", now + 7);
+});
+
+
